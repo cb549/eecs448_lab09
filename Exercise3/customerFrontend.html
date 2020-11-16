@@ -1,0 +1,70 @@
+<html>
+	<head>
+		<script id='myscript' src='formChecker.js'></script>
+		<link href='style.css' rel='stylesheet' type='text/css'/>
+	</head>
+	<body>
+		<h1><u>My Web Store</u></h1>
+		<form id='myform' action='customerBackend.php' method="post">
+			<h3><u>CPU</u></h3>
+			<table>
+				<tr class='head'>
+					<th class='image'></th>
+					<th class='model'>Model</th>
+					<th class='price'>Price</th>
+					<th class='quant'>Quantity</th>
+				</tr>
+				<tr>
+					<td class='image'><img src='ryzen5.jpg' alt='Image' width='150' height='150'></td>
+					<td class='model'>Ryzen 5 3600</td>
+					<td class='price'>$179.99</td>
+					<td class='quant'><input class='quantity' name='qt1' type='number' size='4'  min='0' max='10' value='0'></td>
+				</tr>
+				<tr>
+					<td><img src='corei5.jpg' alt='Image' width='150' height='150'></td>
+					<td class='model'>Intel i5-10400</td>
+					<td class='price'>$149.99</td>
+					<td class='quant'><input class='quantity' name='qt2' type='number' size='4' min='0' max='10' value='0'></td>
+				</tr>
+			</table>
+			<h3><u>GPU</u></h3>
+			<table>
+				<tr class='head'>
+					<th class='image'></th>
+					<th class='model'>Model</th>
+					<th class='price'>Price</th>
+					<th class='quant'>Quantity</th>
+				</tr>
+				<tr>
+					<td class='image'><img src='geforce2060.jpg' alt='Image' width='150' height='150'></td>
+					<td class='model'>EVGA KO Gaming GeForce RTX 2060 Super</td>
+					<td class='price'>$419.99</td>
+					<td class='quant'><input class='quantity' name='qt3' type='number' size='4'  min='0' max='10' value='0'></td>
+				</tr>
+				<tr>
+					<td><img src='radeon5600.jpg' alt='Image' width='150' height='150'></td>
+					<td class='model'>Sapphire PULSE Radeon RX 5600 XT</td>
+					<td class='price'>$309.99</td>
+					<td class='quant'><input class='quantity' name='qt4' type='number' size='4'  min='0' max='10' value='0'></td>
+				</tr>
+			</table><br>
+			<h3><u>Shipping Method</u></h3>
+			<input type="radio" id="7day" name="shipping" value="0.00" required>
+			<label for="7day">Free 7 day</label><br>
+			<input type="radio" id="3day" name="shipping" value="5.00" required>
+			<label for="3day">$5.00 3 day</label><br>
+			<input type="radio" id="night" name="shipping" value="50.00" required>
+			<label for="night">$50.00 overnight</label><br><br>
+			<button class='buttons' type='button' onclick='document.getElementById("info").style.visibility="visible"'>Checkout</button>
+			<input class='buttons' type='reset' onclick='document.getElementById("info").style.visibility="hidden"'>
+			<div id='info' style='visibility:hidden'>
+				<h3>Login to proceed with checkout</h3>
+				<label for='username'>Username</label>
+				<input id='box1' type='email' name='username' required><br>
+				<label for='password'>Password</label>
+				<input id='box2' type='password' name='password' required><br>
+				<input class='buttons' id='sub' type='submit'>
+			</div>
+		</form>
+	</body>
+</html>
